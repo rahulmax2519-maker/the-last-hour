@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #121316;
+    --color-surface-container: #1f1f23;
+    --color-surface-container-high: #292a2d;
+    --color-surface-container-highest: #343538;
+    --color-surface-container-low: #1b1b1f;
+    --color-surface-container-lowest: #0d0e11;
+    --color-primary: #ffb4ab;
+    --color-primary-container: #dc2626;
+    --color-secondary: #45dfa4;
+    --color-tertiary: #f9bd22;
+    --color-on-surface: #e3e2e6;
+    --color-on-surface-variant: #e6bdb8;
+  }
+
+  body {
+    background-color: #121316;
+    color: #e3e2e6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overscroll-behavior: none;
+    position: relative;
+    background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0px, transparent 1px, transparent 2px);
+  }
+
+  /* Monospace fonts for labels & telemetry */
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Hide scrollbars for clean terminal UI */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0e11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292a2d;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #343538;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scanlines-overlay {
+  background: radial-gradient(#292a2d 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Print optimizations for PDF Guide generation */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    background-image: none !important;
+  }
+
+  header, nav, .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  .print\:flex {
+    display: flex !important;
+  }
+
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "The Last Hour — Interactive Murder Mystery",
+  "description": "An interactive cyber-forensic murder mystery investigation terminal. Analyze crime scene dossiers, cross-examine suspects, solve cryptographic puzzles, reconstruct timelines, and identify the killer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
